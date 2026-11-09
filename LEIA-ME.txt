@@ -1,19 +1,22 @@
-TECHMASTER — PROJETO COM ANÚNCIOS
+TECHMASTER — VERSÃO CORRIGIDA
 
-Arquivos:
+Conteúdo:
 - index.html
 - style.css
 - script.js
 
-Instalação:
-1. Extraia os três arquivos na pasta do site.
-2. Mantenha a pasta assets original do projeto no mesmo nível de index.html.
-3. Publique/substitua os arquivos no seu serviço de hospedagem.
+O que foi corrigido:
+- O script da Advertica agora é carregado uma única vez, depois dos três blocos de anúncio.
+- O anúncio 336x280 ocupa uma célula normal da grade, sem criar uma linha larga desnecessária.
+- Os anúncios têm limites de largura para reduzir cortes e rolagem horizontal em telas pequenas.
+- A grade se adapta a computador, tablet e celular.
+- A pesquisa foi protegida para evitar erros caso algum elemento não esteja presente.
 
-Anúncios integrados:
-- 728x90: banner superior em telas maiores.
-- 320x50: banner superior em telas pequenas.
-- 336x280: anúncio intermediário no catálogo.
+Anúncios:
+- 728x90: computador, abaixo da apresentação.
+- 320x50: celular, abaixo da apresentação.
+- 336x280: no catálogo, entre os aplicativos.
 
-Observação:
-Os anúncios dependem do carregamento e das regras da rede Advertica. O código foi inserido conforme os snippets fornecidos. Teste a página publicada e confirme no painel da rede se as impressões estão sendo contabilizadas.
+IMPORTANTE:
+Mantenha a pasta "assets" do seu projeto original na mesma pasta do index.html, pois ela contém as imagens dos aplicativos.
+Os anúncios dependem da rede Advertica, da disponibilidade de campanhas e das políticas do navegador. Teste também a versão publicada no seu domínio.

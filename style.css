@@ -37,7 +37,11 @@ main{max-width:1160px;margin:auto;padding:0 28px}
 .art-caption{position:absolute;right:0;bottom:5px;color:#7b8799;font-size:10px;line-height:1.5;text-align:right}.art-caption b{color:var(--ink)}
 .ad-slot{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;margin:28px auto;padding:8px;max-width:100%;overflow:hidden}
 .ad-label{color:#929cab;font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}
-.ad-slot ins{display:block;max-width:100%;overflow:hidden}
+.ad-slot ins{display:block;width:100%;max-width:100%;overflow:hidden}
+.ad-desktop ins{width:728px;max-width:100%}
+.ad-mobile ins{width:320px;max-width:100%}
+.ad-middle{width:100%;max-width:336px;min-height:280px;align-self:start;justify-self:center;margin:0 auto;padding:8px 0}
+.ad-middle ins{width:336px;max-width:100%}
 .ad-desktop{display:block}.ad-mobile{display:none}
 .catalog-section{padding:20px 2% 85px}
 .section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:25px}
@@ -64,7 +68,7 @@ main{max-width:1160px;margin:auto;padding:0 28px}
 .download:hover{background:var(--blue-dark)}
 .download-arrow{width:25px;height:25px;display:grid;place-items:center;border-radius:7px;color:#c9f7df;background:#ffffff20;font-size:16px}
 .download-disabled{color:#8c96a5;background:#edf0f5;cursor:not-allowed}.download-disabled:hover{background:#edf0f5}
-.ad-middle{grid-column:1/-1;margin:8px auto 12px}
+.ad-middle{grid-column:auto;margin:0 auto}
 .no-results{padding:28px;border:1px dashed #cbd4e1;border-radius:12px;color:var(--muted);text-align:center;font-size:13px}
 footer{display:flex;flex-direction:column;align-items:center;gap:9px;padding:34px 20px;border-top:1px solid var(--line);background:#e7ecf3;text-align:center}
 .footer-brand{font-size:17px}.footer-brand .brand-mark{width:30px;height:30px;border-radius:9px;font-size:15px}
@@ -79,3 +83,19 @@ footer p{color:var(--muted);font-size:12px}.copyright{margin-top:8px;color:#929c
  .ad-top{margin:18px auto 22px}.ad-middle{grid-column:1/-1}
 }
 @media(max-width:390px){.hero h1{font-size:36px}.section-heading{flex-direction:column}}
+
+/* Ajustes de encaixe para os espaços publicitários */
+@media (max-width: 900px) {
+  .apps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ad-middle { width: 100%; }
+}
+@media (max-width: 600px) {
+  .apps { grid-template-columns: minmax(0, 1fr); }
+  .ad-middle { grid-column: auto; width: min(336px, 100%); min-height: 280px; }
+  .ad-middle ins { width: 100% !important; max-width: 100%; }
+  .ad-top { width: 100%; }
+  .ad-mobile ins { width: 320px; max-width: 100%; }
+}
+
+html, body { max-width: 100%; overflow-x: hidden; }
+.ad-slot { box-sizing: border-box; }
